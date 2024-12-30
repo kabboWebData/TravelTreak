@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Booking UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f4f4f4;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    .tab {
+        margin: 0 1.5rem;
+        padding: 0.5rem;
+        cursor: pointer;
+        font-weight: bold;
+        color: gray;
+    }
+
+    .tab.active {
+        color: green;
+        border-bottom: 2px solid green;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        margin-top: 1.25rem;
+        justify-content: center;
+    }
+
+    .card {
+        background: #fff;
+        padding: 1rem;
+        border-radius: 0.625rem;
+        box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 18.75rem;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-0.625rem);
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 0.625rem;
+        margin-bottom: 0.9375rem;
+    }
+
+    .card button {
+        background: gray;
+        color: #fff;
+        padding: 0.625rem 1.25rem;
+        border: none;
+        border-radius: 0.3125rem;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .card button.active {
+        background: green;
+    }
+
+    .nav-icons {
+        display: flex;
+        justify-content: center;
+        gap: 0.9375rem;
+        margin-top: 1.25rem;
+    }
+
+    .nav-icons button {
+        background: #ddd;
+        border: none;
+        padding: 0.625rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .nav-icons button:hover {
+        background: #ccc;
+    }
+</style>
+
+</head>
+<body class="bg-gradient-to-b from-green-100 to-green-50">
+  
+  <div class="w-full max-w-[90%] lg:max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Home Header -->
+    <div class="my-28 flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0 lg:space-x-16 py-16">
+      <header class="text-center lg:text-left">
+        <h1 class="text-lg text-green-700 font-semibold">Explore the World!</h1>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">Let's Make Your <br> Best Trip Ever!</h2>
+        <p class="text-gray-600 mt-4">Embark on a journey to discover the world's wonders.</p>
+        <button class="mt-6 px-6 py-3 bg-green-500 text-white font-semibold rounded-full hover:bg-green-600">Explore Now</button>
+      </header>
+
+      <div class="relative flex justify-center lg:justify-end">
+        <div class="relative">
+          <div class="absolute -top-24 lg:-top-32">
+            <img src="Images/messi.jpg" alt="Beautiful travel destination image" class="mx-auto rounded-lg shadow-lg w-[90vw] max-w-[550px] h-auto object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Hotel Destination -->
+    <section class="mt-32 bg-white shadow-lg rounded-xl p-8">
+      <div class="flex justify-center mb-8">
+        <nav class="flex flex-wrap justify-center space-x-6">
+          <button class="flex flex-col items-center text-green-700 font-semibold focus:outline-none">
+            <span class="bg-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">🏨</span>
+            Hotels
+          </button>
+          <button class="flex flex-col items-center text-gray-500 hover:text-green-700">
+            <span class="bg-gray-200 w-10 h-10 flex items-center justify-center rounded-full">🚗</span>
+            Car Rentals
+          </button>
+          <button class="flex flex-col items-center text-gray-500 hover:text-green-700">
+            <span class="bg-gray-200 w-10 h-10 flex items-center justify-center rounded-full">✈️</span>
+            Flights
+          </button>
+          <button class="flex flex-col items-center text-gray-500 hover:text-green-700">
+            <span class="bg-gray-200 w-10 h-10 flex items-center justify-center rounded-full">🗺️</span>
+            Trips
+          </button>
+          <button class="flex flex-col items-center text-gray-500 hover:text-green-700">
+            <span class="bg-gray-200 w-10 h-10 flex items-center justify-center rounded-full">🛳️</span>
+            Cruises
+          </button>
+          <button class="flex flex-col items-center text-gray-500 hover:text-green-700">
+            <span class="bg-gray-200 w-10 h-10 flex items-center justify-center rounded-full">🎟️</span>
+            Activities
+          </button>
+        </nav>
+      </div>
+
+      <div class="bg-green-50 p-6 rounded-lg">
+        <form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div>
+            <label class="block text-gray-700 font-medium">Destination</label>
+            <input type="text" placeholder="Enter a city" class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-medium">Check In</label>
+            <input type="date" class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-medium">Check Out</label>
+            <input type="date" class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md">
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium">Adults</label>
+              <input type="number" min="1" value="1" class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium">Children</label>
+              <input type="number" min="0" value="0" class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md">
+            </div>
+          </div>
+        </form>
+        <div class="text-center mt-6">
+          <button class="px-6 py-3 bg-green-500 text-white font-semibold rounded-full hover:bg-green-600">Search Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit Popular Destinations -->
+    <section>
+      <h1 class="text-center text-2xl md:text-3xl font-bold mb-8">Visit Popular Destinations in the World</h1>
+      <div class="tabs">
+        <div class="tab active" data-tab="special-deals">Special Deals</div>
+        <div class="tab" data-tab="popular">Popular</div>
+        <div class="tab" data-tab="recommendation">Recommendation</div>
+        <div class="tab" data-tab="best-price">Best Price</div>
+      </div>
+
+      <div class="cards">
+        <div class="card" data-card="special-deals">
+          <img src="Images/messi.jpg" alt="Destination 1">
+          <h3>China - Shuozu & Zhouzarang</h3>
+          <p>10 Activities | 12 Places | 1 Week</p>
+          <p><strong>$454</strong>/Person</p>
+          <button class="active">View Availability</button>
+        </div>
+        <div class="card" data-card="popular">
+          <img src="Images/messi.jpg" alt="Destination 2">
+          <h3>China - Shuozu & Zhouzarang</h3>
+          <p>10 Activities | 12 Places | 1 Week</p>
+          <p><strong>$454</strong>/Person</p>
+          <button>View Availability</button>
+        </div>
+        <div class="card" data-card="recommendation">
+          <img src="https://via.placeholder.com/300x200" alt="Destination 3">
+          <h3>China - Shuozu & Zhouzarang</h3>
+          <p>10 Activities | 12 Places | 1 Week</p>
+          <p><strong>$454</strong>/Person</p>
+          <button>View Availability</button>
+        </div>
+      </div>
+
+      <div class="nav-icons">
+        <button class="prev">&larr;</button>
+        <button class="next">&rarr;</button>
+      </div>
+    </section>
+
+   </div>
+</body>
+
+

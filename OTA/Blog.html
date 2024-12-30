@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .active-tab {
+      background-color: #00c182; /* Active Tab Color */
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Container -->
+  <div class="bg-[#DDF8E5] w-full text-gray-800">
+    <!-- Navbar Section -->
+    <div id="Navber"></div>
+    <script>
+      fetch('Navber.html')
+        .then(response => {
+          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('Navber').innerHTML = data;
+        })
+        .catch(err => console.error('Error loading Navber:', err));
+    </script>
+
+    <!-- Blog Header Section -->
+    <section class="mx-auto max-w-[1536px] px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center">
+      <div class="text-center md:text-left md:w-1/2 mb-8 md:mb-0">
+        <h1 class="text-4xl font-bold text-gray-800">Blog</h1>
+        <p class="text-gray-600 mt-2">Suzu Travels is one of the supportive and finest holiday management travel.</p>
+        <nav class="text-sm text-gray-500 mt-2">
+          Home ~ <span class="text-green-600">Destination</span>
+        </nav>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="Images/messi.jpg" alt="FAQ Image" class="max-w-full h-[500px] rounded shadow-md">
+      </div>
+    </section>
+  </div>
+
+  <!-- Tabs Section -->
+  <div class="font-sans h-auto flex flex-col justify-start pt-8">
+    <div class="container mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 mb-6">
+      <div class="flex flex-wrap justify-center gap-4">
+        <button id="tab-all" class="tab-btn active-tab px-4 py-2 rounded text-sm md:text-base">All</button>
+        <button id="tab-advices" class="tab-btn px-4 py-2 rounded text-sm md:text-base">Advices</button>
+        <button id="tab-announcements" class="tab-btn px-4 py-2 rounded text-sm md:text-base">Announcements</button>
+        <button id="tab-news" class="tab-btn px-4 py-2 rounded text-sm md:text-base">News</button>
+        <button id="tab-consultation" class="tab-btn px-4 py-2 rounded text-sm md:text-base">Consultation</button>
+        <button id="tab-development" class="tab-btn px-4 py-2 rounded text-sm md:text-base">Development</button>
+      </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="container mx-auto max-w-[1536px] px-4 sm:px-6 lg:px-8 mb-10">
+      <div id="card-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <!-- Card Template -->
+        <div class="card advices bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="Images/messi.jpg" alt="Card Image" class="w-full">
+          <div class="p-4">
+            <p class="text-sm text-gray-500 mb-2">
+              <span>&#128100; Posted by Admin</span> &nbsp; <span>&#128197; October 30, 2022</span>
+            </p>
+            <h3 class="font-bold text-lg mb-2">Our strength, Your Business</h3>
+            <p class="text-gray-600 mb-4">Adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet.</p>
+            <a href="BlogDetails.html" class="text-teal-500 font-semibold">Read More</a>
+          </div>
+        </div>
+        
+        <!-- Other Cards (Repeat for each category like 'news', 'consultation', etc.) -->
+        <div class="card news bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="Images/messi.jpg" alt="Card Image" class="w-full">
+          <div class="p-4">
+            <p class="text-sm text-gray-500 mb-2">
+              <span>&#128100; Posted by Admin</span> &nbsp; <span>&#128197; October 30, 2022</span>
+            </p>
+            <h3 class="font-bold text-lg mb-2">Our strength, Your Business</h3>
+            <p class="text-gray-600 mb-4">Adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet.</p>
+            <a href="BlogDetails.html" class="text-teal-500 font-semibold">Read More</a>
+          </div>
+        </div>
+
+        <!-- More Cards go here -->
+        <div class="card consultation bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="Images/messi.jpg" alt="Card Image" class="w-full">
+          <div class="p-4">
+            <p class="text-sm text-gray-500 mb-2">
+              <span>&#128100; Posted by Admin</span> &nbsp; <span>&#128197; October 30, 2022</span>
+            </p>
+            <h3 class="font-bold text-lg mb-2">Our strength, Your Business</h3>
+            <p class="text-gray-600 mb-4">Adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet.</p>
+            <a href="BlogDetails.html" class="text-teal-500 font-semibold">Read More</a>
+          </div>
+        </div>
+
+        <!-- Repeat other card categories -->
+        <div class="card announcements bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="Images/messi.jpg" alt="Card Image" class="w-full">
+          <div class="p-4">
+            <p class="text-sm text-gray-500 mb-2">
+              <span>&#128100; Posted by Admin</span> &nbsp; <span>&#128197; October 30, 2022</span>
+            </p>
+            <h3 class="font-bold text-lg mb-2">Our strength, Your Business</h3>
+            <p class="text-gray-600 mb-4">Adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet.</p>
+            <a href="BlogDetails.html" class="text-teal-500 font-semibold">Read More</a>
+          </div>
+        </div>
+
+        <div class="card development bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="Images/messi.jpg" alt="Card Image" class="w-full">
+          <div class="p-4">
+            <p class="text-sm text-gray-500 mb-2">
+              <span>&#128100; Posted by Admin</span> &nbsp; <span>&#128197; October 30, 2022</span>
+            </p>
+            <h3 class="font-bold text-lg mb-2">Our strength, Your Business</h3>
+            <p class="text-gray-600 mb-4">Adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet.</p>
+            <a href="BlogDetails.html" class="text-teal-500 font-semibold">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div id="Footer" class="w-full"></div>
+  <script>
+    fetch('Footer.html')
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('Footer').innerHTML = data;
+      })
+      .catch(err => console.error('Error loading Footer:', err));
+  </script>
+
+  <!-- JavaScript for Tabs -->
+  <script>
+    const tabs = document.querySelectorAll(".tab-btn");
+    const cards = document.querySelectorAll(".card");
+    const footer = document.getElementById("Footer");
+    const cardContainer = document.getElementById("card-container");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active-tab"));
+        tab.classList.add("active-tab");
+
+        const category = tab.id.replace("tab-", "");
+
+        let visibleCards = 0;
+        cards.forEach(card => {
+          if (category === "all" || card.classList.contains(category)) {
+            card.classList.remove("hidden");
+            visibleCards++;
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+
+        // Adjust Footer Position Based on Visible Cards
+        if (visibleCards === 0) {
+          footer.classList.add("absolute", "bottom-0");
+        } else {
+          footer.classList.remove("absolute", "bottom-0");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

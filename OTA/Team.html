@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #d6fef5, #ffffff);
+    }
+  </style>
+</head>
+<body class="font-sans leading-relaxed">
+
+  <div id="Navber"></div>
+  
+    <script>
+      // Load Navber.html dynamically
+      fetch('Navber.html')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('Navber').innerHTML = data;
+  
+          // Add event listeners for the mobile menu toggle and dropdown functionality after loading Navber
+          const menuToggle = document.getElementById('menu-toggle');
+          const mobileMenu = document.getElementById('mobile-menu');
+          const closeMenu = document.getElementById('close-menu');
+          const togglePages = document.getElementById('toggle-pages');
+          const pagesDropdown = document.getElementById('pages-dropdown');
+
+          if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+              mobileMenu.classList.toggle('hidden');
+            });
+          }
+
+          if (closeMenu && mobileMenu) {
+            closeMenu.addEventListener('click', () => {
+              mobileMenu.classList.add('hidden');
+            });
+          }
+
+          if (togglePages && pagesDropdown) {
+            togglePages.addEventListener('click', () => {
+              pagesDropdown.classList.toggle('hidden');
+            });
+          }
+        })
+        .catch(err => console.error('Error loading Navber:', err));
+    </script>
+
+
+
+    <section class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center">
+        <!-- FAQ Header -->
+        <div class="text-center md:text-left md:w-1/2 mb-8 md:mb-0">
+          <h1 class="text-4xl font-bold text-gray-800">Team</h1>
+          <p class="text-gray-600 mt-2">Suzu Travels is one of the supportive and finest holiday Management travel</p>
+          <nav class="text-sm text-gray-500 mt-2">
+            Home ~ <span class="text-green-600">Destination</span>
+          </nav>
+        </div>
+        <!-- Image Section -->
+        <div class="md:w-1/2 flex justify-center">
+          <img src="Images/messi.jpg" alt="FAQ Image" class="max-w-full h-[500px] rounded shadow-md">
+        </div>
+      </section>
+
+  <!-- Header Section -->
+   <div class="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8" > 
+  <section class="text-center py-10">
+    <h3 class="text-lg text-orange-500 font-semibold">Professional people</h3>
+    <h1 class="text-4xl font-bold text-gray-800 mt-2">meet our tour <span class="block">guides</span></h1>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="max-w-[1536px] mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+    <!-- First Card -->
+    <div class="bg-white shadow-md rounded-lg p-6 text-center h-[320px] flex flex-col justify-center">
+      <img src="https://via.placeholder.com/80" alt="Jacob Knight" class="rounded-full mx-auto mb-4">
+      <h3 class="font-bold text-gray-800 text-lg">Jacob Knight</h3>
+      <p class="text-gray-600 text-sm mt-1">Packages for you and You can customize it howsoever you want it.</p>
+      <div class="flex justify-center mt-3 space-x-3">
+        <i class="fab fa-facebook text-gray-400"></i>
+        <i class="fab fa-linkedin text-gray-400"></i>
+        <i class="fab fa-instagram text-gray-400"></i>
+      </div>
+    </div>
+
+    <!-- Second Card -->
+    <div class="bg-white shadow-md rounded-lg p-6 text-center h-[320px] flex flex-col justify-center mt-8">
+      <img src="https://via.placeholder.com/80" alt="Alexandra Booth" class="rounded-full mx-auto mb-4">
+      <h3 class="font-bold text-green-600 text-lg">Alexandra Booth</h3>
+      <p class="text-gray-600 text-sm mt-1">Tour guide to help you getting best tour experience.</p>
+      <div class="flex justify-center mt-3 space-x-3">
+        <i class="fab fa-facebook text-gray-400"></i>
+        <i class="fab fa-linkedin text-gray-400"></i>
+        <i class="fab fa-instagram text-gray-400"></i>
+      </div>
+    </div>
+
+    <!-- Third Card -->
+    <div class="bg-white shadow-md rounded-lg p-6 text-center h-[320px] flex flex-col justify-center mt-16">
+      <img src="https://via.placeholder.com/80" alt="Kian Wilkinson" class="rounded-full mx-auto mb-4">
+      <h3 class="font-bold text-gray-800 text-lg">Kian Wilkinson</h3>
+      <p class="text-gray-600 text-sm mt-1">Will book best packages according to your time and destinations.</p>
+      <div class="flex justify-center mt-3 space-x-3">
+        <i class="fab fa-facebook text-gray-400"></i>
+        <i class="fab fa-linkedin text-gray-400"></i>
+        <i class="fab fa-instagram text-gray-400"></i>
+      </div>
+    </div>
+
+    <!-- Fourth Card -->
+    <div class="bg-white shadow-md rounded-lg p-6 text-center h-[320px] flex flex-col justify-center">
+      <img src="https://via.placeholder.com/80" alt="Lot of Choices" class="rounded-full mx-auto mb-4">
+      <h3 class="font-bold text-gray-800 text-lg">Lot of Choices</h3>
+      <p class="text-gray-600 text-sm mt-1">Packages for you and You can customize it howsoever you want it.</p>
+      <div class="flex justify-center mt-3 space-x-3">
+        <i class="fab fa-facebook text-gray-400"></i>
+        <i class="fab fa-linkedin text-gray-400"></i>
+        <i class="fab fa-instagram text-gray-400"></i>
+      </div>
+    </div>
+
+    <!-- Fifth Card -->
+    <div class="bg-white shadow-md rounded-lg p-6 text-center h-[320px] flex flex-col justify-center mt-8">
+      <img src="https://via.placeholder.com/80" alt="Best Tour Guide" class="rounded-full mx-auto mb-4">
+      <h3 class="font-bold text-gray-800 text-lg">Best Tour Guide</h3>
+      <p class="text-gray-600 text-sm mt-1">Tour guide to help you getting best tour experience.</p>
+      <div class="flex justify-center mt-3 space-x-3">
+        <i class="fab fa-facebook text-gray-400"></i>
+        <i class="fab fa-linkedin text-gray-400"></i>
+        <i class="fab fa-instagram text-gray-400"></i>
+      </div>
+    </div>
+
+    <!-- Sixth Card -->
+    <div class="bg-white shadow-md rounded-lg p-6 text-center h-[320px] flex flex-col justify-center mt-16">
+      <img src="https://via.placeholder.com/80" alt="Easy Booking" class="rounded-full mx-auto mb-4">
+      <h3 class="font-bold text-gray-800 text-lg">Easy Booking</h3>
+      <p class="text-gray-600 text-sm mt-1">Will book best packages according to your time and destinations.</p>
+      <div class="flex justify-center mt-3 space-x-3">
+        <i class="fab fa-facebook text-gray-400"></i>
+        <i class="fab fa-linkedin text-gray-400"></i>
+        <i class="fab fa-instagram text-gray-400"></i>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous"></script>
+
+  <div id="Footer"></div>
+
+<script>
+  // Load Footer.html dynamically
+  fetch('Footer.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('Footer').innerHTML = data;
+    })
+    .catch(err => console.error('Error loading Footer:', err));
+</script>
+
+
+
+</body>
+</html>

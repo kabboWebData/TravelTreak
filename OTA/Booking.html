@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .active-tab {
+      background-color: #00c182; /* Active Tab Color */
+      color: white;
+    }
+  </style>
+</head>
+<body >
+
+
+    <div class=" bg-[#DDF8E5] ">  
+        
+        <div id="Navber"></div>
+  
+        <script>
+          // Load Navber.html dynamically
+          fetch('Navber.html')
+            .then(response => {
+              if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              return response.text();
+            })
+            .then(data => {
+              document.getElementById('Navber').innerHTML = data;
+      
+              // Add event listeners for the mobile menu toggle and dropdown functionality after loading Navber
+              const menuToggle = document.getElementById('menu-toggle');
+              const mobileMenu = document.getElementById('mobile-menu');
+              const closeMenu = document.getElementById('close-menu');
+              const togglePages = document.getElementById('toggle-pages');
+              const pagesDropdown = document.getElementById('pages-dropdown');
+    
+              if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', () => {
+                  mobileMenu.classList.toggle('hidden');
+                });
+              }
+    
+              if (closeMenu && mobileMenu) {
+                closeMenu.addEventListener('click', () => {
+                  mobileMenu.classList.add('hidden');
+                });
+              }
+    
+              if (togglePages && pagesDropdown) {
+                togglePages.addEventListener('click', () => {
+                  pagesDropdown.classList.toggle('hidden');
+                });
+              }
+            })
+            .catch(err => console.error('Error loading Navber:', err));
+        </script>
+        
+
+
+
+    <section class="max-w-[1536px] mx-auto px-6 py-10 flex flex-col md:flex-row items-center">
+        <!-- FAQ Header -->
+        <div class="text-center md:text-left md:w-1/2 mb-8 md:mb-0">
+          <h1 class="text-4xl font-bold text-gray-800">Booking</h1>
+          <p class="text-gray-600 mt-2">Suzu Travels is one of the supportive and finest holiday Management travel</p>
+          <nav class="text-sm text-gray-500 mt-2">
+            Home ~ <span class="text-green-600">Destination</span>
+          </nav>
+        </div>
+        <!-- Image Section -->
+        <div class="md:w-1/2 flex justify-center">
+          <img src="Images/messi.jpg" alt="FAQ Image" class="max-w-full h-[500px] rounded shadow-md">
+        </div>
+      </section>
+
+
+
+       <!-- Hotel Search Section -->
+     <div class=" w-full mx-auto max-w-[1536px] px-4 sm:px-6 lg:px-8"> 
+        <section class="bg-white shadow-lg rounded-xl w-full mx-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8  p-8 mt-12">
+          <div  > 
+          <nav class="flex justify-center space-x-6 mb-8">
+            <button class="flex flex-col items-center text-green-700 font-semibold">
+              <span class="bg-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">🏨</span>
+              Hotels
+            </button>
+            <button class="flex flex-col items-center text-gray-500 hover:text-green-700">
+              <span class="bg-gray-200 w-10 h-10 flex items-center justify-center rounded-full">🚗</span>
+              Car Rentals
+            </button>
+            <button class="flex flex-col items-center text-gray-500 hover:text-green-700">
+              <span class="bg-gray-200 w-10 h-10 flex items-center justify-center rounded-full">✈️</span>
+              Flights
+            </button>
+            <button class="flex flex-col items-center text-gray-500 hover:text-green-700">
+              <span class="bg-gray-200 w-10 h-10 flex items-center justify-center rounded-full">🗺️</span>
+              Trips
+            </button>
+          </nav>
+    
+          <form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium">Destination</label>
+              <input type="text" placeholder="Enter a city"
+                class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium">Check In</label>
+              <input type="date"
+                class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium">Check Out</label>
+              <input type="date"
+                class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500">
+            </div>
+            <div class="flex space-x-4">
+              <div>
+                <label class="block text-gray-700 font-medium">Adults</label>
+                <input type="number" min="1" value="1"
+                  class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500">
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium">Children</label>
+                <input type="number" min="0" value="0"
+                  class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500">
+              </div>
+            </div>
+          </form>
+          <div class="text-center mt-6">
+            <button class="px-6 py-3 bg-green-500 text-white font-semibold rounded-full hover:bg-green-600">
+              Search Now
+            </button>
+          </div>
+        </div>
+        </section>
+      </div> <br/> <br/>
+
+    </div>
+
+
+
+      <section class="text-center py-10">
+        <h3 class="text-lg text-orange-500 font-semibold">Professional people</h3>
+        <h1 class="text-4xl font-bold text-gray-800 mt-2">meet our tour <span class="block">guides</span></h1>
+      </section>
+    
+      <!-- Cards Section -->
+      <section class="max-w-[1536px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+        <!-- First Card -->
+        <div class="bg-white shadow-md rounded-lg p-6 text-center h-[320px] flex flex-col justify-center">
+          <img src="https://via.placeholder.com/80" alt="Jacob Knight" class="rounded-full mx-auto mb-4">
+          <h3 class="font-bold text-gray-800 text-lg">Jacob Knight</h3>
+          <p class="text-gray-600 text-sm mt-1">Packages for you and You can customize it howsoever you want it.</p>
+          <div class="flex justify-center mt-3 space-x-3">
+            <i class="fab fa-facebook text-gray-400"></i>
+            <i class="fab fa-linkedin text-gray-400"></i>
+            <i class="fab fa-instagram text-gray-400"></i>
+          </div>
+        </div>
+    
+        <!-- Second Card -->
+        <div class="bg-white shadow-md rounded-lg p-6 text-center h-[320px] flex flex-col justify-center mt-8">
+          <img src="https://via.placeholder.com/80" alt="Alexandra Booth" class="rounded-full mx-auto mb-4">
+          <h3 class="font-bold text-green-600 text-lg">Alexandra Booth</h3>
+          <p class="text-gray-600 text-sm mt-1">Tour guide to help you getting best tour experience.</p>
+          <div class="flex justify-center mt-3 space-x-3">
+            <i class="fab fa-facebook text-gray-400"></i>
+            <i class="fab fa-linkedin text-gray-400"></i>
+            <i class="fab fa-instagram text-gray-400"></i>
+          </div>
+        </div>
+    
+        <!-- Third Card -->
+        <div class="bg-white shadow-md rounded-lg p-6 text-center h-[320px] flex flex-col justify-center mt-16">
+          <img src="https://via.placeholder.com/80" alt="Kian Wilkinson" class="rounded-full mx-auto mb-4">
+          <h3 class="font-bold text-gray-800 text-lg">Kian Wilkinson</h3>
+          <p class="text-gray-600 text-sm mt-1">Will book best packages according to your time and destinations.</p>
+          <div class="flex justify-center mt-3 space-x-3">
+            <i class="fab fa-facebook text-gray-400"></i>
+            <i class="fab fa-linkedin text-gray-400"></i>
+            <i class="fab fa-instagram text-gray-400"></i>
+          </div>
+        </div>
+    
+    
+      </section>
+
+
+      <section class="mt-12 w-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12">
+        <h1 class="text-2xl font-bold text-center text-gray-800">
+          Visit Popular Destinations in the World
+        </h1>
+        
+        <!-- Tabs -->
+        <div class="tabs flex justify-center flex-wrap mt-6">
+          <div
+            class="tab text-green-700 border-b-2 border-green-700 px-4 py-2 cursor-pointer font-bold"
+            data-tab="special-deals"
+          >
+            Special Deals
+          </div>
+          <div
+            class="tab text-gray-500 hover:text-green-700 px-4 py-2 cursor-pointer font-bold"
+            data-tab="popular"
+          >
+            Popular
+          </div>
+          <div
+            class="tab text-gray-500 hover:text-green-700 px-4 py-2 cursor-pointer font-bold"
+            data-tab="recommendation"
+          >
+            Recommendation
+          </div>
+          <div
+            class="tab text-gray-500 hover:text-green-700 px-4 py-2 cursor-pointer font-bold"
+            data-tab="best-price"
+          >
+            Best Price
+          </div>
+        </div>
+      
+        <!-- Cards -->
+        <div class="cards mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div class="card bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:-translate-y-2" data-card="special-deals">
+            <img
+              src="Images/messi.jpg"
+              alt="Destination 1"
+              class="w-full h-auto rounded-lg shadow-md mb-4"
+            />
+            <h3 class="text-lg font-bold mb-2">China - Shuozu & Zhouzarang</h3>
+            <p class="text-gray-600">10 Activities | 12 Places | 1 Week</p>
+            <p class="text-gray-800 font-semibold mb-4">
+              <strong>$454</strong>/Person
+            </p>
+            <button
+              class="mt-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+            >
+              View Availability
+            </button>
+          </div>
+      
+          <div class="card bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:-translate-y-2" data-card="popular">
+            <img
+              src="Images/messi.jpg"
+              alt="Destination 2"
+              class="w-full h-auto rounded-lg shadow-md mb-4"
+            />
+            <h3 class="text-lg font-bold mb-2">China - Shuozu & Zhouzarang</h3>
+            <p class="text-gray-600">10 Activities | 12 Places | 1 Week</p>
+            <p class="text-gray-800 font-semibold mb-4">
+              <strong>$454</strong>/Person
+            </p>
+            <button
+              class="mt-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+            >
+              View Availability
+            </button>
+          </div>
+      
+          <div class="card bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:-translate-y-2" data-card="recommendation">
+            <img
+              src="Images/messi.jpg"
+              alt="Destination 3"
+              class="w-full h-auto rounded-lg shadow-md mb-4"
+            />
+            <h3 class="text-lg font-bold mb-2">China - Shuozu & Zhouzarang</h3>
+            <p class="text-gray-600">10 Activities | 12 Places | 1 Week</p>
+            <p class="text-gray-800 font-semibold mb-4">
+              <strong>$454</strong>/Person
+            </p>
+            <button
+              class="mt-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+            >
+              View Availability
+            </button>
+          </div>
+        </div>
+      
+        <!-- Navigation Icons -->
+        <div class="nav-icons mt-8 flex justify-center gap-4">
+          <button class="prev px-4 py-2 bg-gray-300 rounded-full hover:bg-gray-400 transition">
+            &larr;
+          </button>
+          <button class="next px-4 py-2 bg-gray-300 rounded-full hover:bg-gray-400 transition">
+            &rarr;
+          </button>
+        </div>
+      
+        <script src="Js/HomeTopDestination.js" > </script>
+      </section>
+
+        <!-- Frequently Asked Questions -->
+  <section class="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">
+      <span class="text-green-600">Answers</span> Questions
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Repeated FAQ Cards -->
+      <div class="bg-green-500 text-white font-semibold p-4 rounded shadow">
+        Can I back extra nights of hotel accommodation?
+      </div>
+      <div class="bg-green-500 text-white font-semibold p-4 rounded shadow">
+        Can I back extra nights of hotel accommodation?
+      </div>
+      <div class="bg-green-500 text-white font-semibold p-4 rounded shadow">
+        Can I back extra nights of hotel accommodation?
+      </div>
+      <div class="bg-green-500 text-white font-semibold p-4 rounded shadow">
+        Can I back extra nights of hotel accommodation?
+      </div>
+      <p> Can I back extra nights of hotel accommodation and Can I back extra nights of hotel accommodation
+        and Can I back extra nights of hotel accommodation.
+      </p>
+     
+    </div>
+
+    <!-- <i class="fa-brands fa-x-twitter"></i> -->
+  </section>
+
+  <div id="Footer"></div>
+
+<script>
+  // Load Footer.html dynamically
+  fetch('Footer.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('Footer').innerHTML = data;
+    })
+    .catch(err => console.error('Error loading Footer:', err));
+</script>
+
+
+
+</body>
+</html>

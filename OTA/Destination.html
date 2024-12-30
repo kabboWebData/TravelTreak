@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destination Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+ 
+
+
+
+</head>
+<body class="bg-[#BCDAD2] text-gray-800">
+
+
+  <div id="Navber"></div>
+  
+    <script>
+      // Load Navber.html dynamically
+      fetch('Navber.html')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('Navber').innerHTML = data;
+  
+          // Add event listeners for the mobile menu toggle and dropdown functionality after loading Navber
+          const menuToggle = document.getElementById('menu-toggle');
+          const mobileMenu = document.getElementById('mobile-menu');
+          const closeMenu = document.getElementById('close-menu');
+          const togglePages = document.getElementById('toggle-pages');
+          const pagesDropdown = document.getElementById('pages-dropdown');
+
+          if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+              mobileMenu.classList.toggle('hidden');
+            });
+          }
+
+          if (closeMenu && mobileMenu) {
+            closeMenu.addEventListener('click', () => {
+              mobileMenu.classList.add('hidden');
+            });
+          }
+
+          if (togglePages && pagesDropdown) {
+            togglePages.addEventListener('click', () => {
+              pagesDropdown.classList.toggle('hidden');
+            });
+          }
+        })
+        .catch(err => console.error('Error loading Navber:', err));
+    </script>
+
+
+  
+
+  
+
+  <!-- Top Section -->
+  <section class="max-w-[1536px] mx-auto px-6 py-10 flex flex-col md:flex-row items-center">
+    <!-- FAQ Header -->
+    <div class="text-center md:text-left md:w-1/2 mb-8 md:mb-0">
+      <h1 class="text-4xl font-bold text-gray-800">Destination Page </h1>
+      <p class="text-gray-600 mt-2">Suzu Travels is one of the supportive and finest holiday Management travel</p>
+      <nav class="text-sm text-gray-500 mt-2">
+        Home ~ <span class="text-green-600">Destination</span>
+      </nav>
+    </div>
+    <!-- Image Section -->
+    <div class="md:w-1/2 flex justify-center">
+      <img src="Images/messi.jpg" alt="FAQ Image" class="max-w-full h-[500px] rounded shadow-md">
+    </div>
+  </section>
+
+  <!-- Title -->
+   <div class=" w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 " > 
+
+  
+  <div class="text-center mt-4 mb-8">
+    <h2 class="text-green-600 font-semibold">Top Destinations</h2>
+    <h3 class="text-3xl font-bold mt-1">Explore the Beauty of <br> The World</h3>
+  </div>
+  
+  <!-- Destination Cards -->
+  <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <!-- Card 1 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+      <img src="Images/messi.jpg" alt="Floating City" class="w-full h-48 object-cover">
+      <div class="absolute top-2 right-2 bg-orange-100 text-orange-500 font-semibold px-3 py-1 rounded-lg shadow-md">
+        $299
+      </div>
+      <div class="p-4">
+        <p class="text-sm text-gray-500">Skye, Scotland</p>
+        <h4 class="text-lg font-semibold mt-1">Enjoy The Beauty Of The Floating City</h4>
+        <p class="mt-2 flex items-center">
+          ⭐ 4.9k <span class="text-gray-400 text-sm ml-1">(7.1k Reviews)</span>
+        </p>
+      </div>
+    </div>
+  
+    <!-- Card 2 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+      <img src="https://via.placeholder.com/400x250" alt="Brazil City" class="w-full h-48 object-cover">
+      <div class="absolute top-2 right-2 bg-orange-100 text-orange-500 font-semibold px-3 py-1 rounded-lg shadow-md">
+        $299
+      </div>
+      <div class="p-4">
+        <p class="text-sm text-gray-500">Rio de Janeiro, Brazil</p>
+        <h4 class="text-lg font-semibold mt-1">Enjoy The Beauty Of The Brazil City</h4>
+        <p class="mt-2 flex items-center">
+          ⭐ 4.9k <span class="text-gray-400 text-sm ml-1">(7.1k Reviews)</span>
+        </p>
+      </div>
+    </div>
+  
+    <!-- Card 3 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+      <img src="https://via.placeholder.com/400x250" alt="Venice City" class="w-full h-48 object-cover">
+      <div class="absolute top-2 right-2 bg-orange-100 text-orange-500 font-semibold px-3 py-1 rounded-lg shadow-md">
+        $299
+      </div>
+      <div class="p-4">
+        <p class="text-sm text-gray-500">Venice, Italy</p>
+        <h4 class="text-lg font-semibold mt-1">Enjoy The Beauty Of The Floating City</h4>
+        <p class="mt-2 flex items-center">
+          ⭐ 4.9k <span class="text-gray-400 text-sm ml-1">(7.1k Reviews)</span>
+        </p>
+      </div>
+    </div>
+  
+    <!-- Card 4 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+      <img src="https://via.placeholder.com/400x250" alt="Paris City" class="w-full h-48 object-cover">
+      <div class="absolute top-2 right-2 bg-orange-100 text-orange-500 font-semibold px-3 py-1 rounded-lg shadow-md">
+        $399
+      </div>
+      <div class="p-4">
+        <p class="text-sm text-gray-500">Paris, France</p>
+        <h4 class="text-lg font-semibold mt-1">Experience The City Of Lights</h4>
+        <p class="mt-2 flex items-center">
+          ⭐ 5.0k <span class="text-gray-400 text-sm ml-1">(9.2k Reviews)</span>
+        </p>
+      </div>
+    </div>
+  
+    <!-- Card 5 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+      <img src="https://via.placeholder.com/400x250" alt="New York City" class="w-full h-48 object-cover">
+      <div class="absolute top-2 right-2 bg-orange-100 text-orange-500 font-semibold px-3 py-1 rounded-lg shadow-md">
+        $499
+      </div>
+      <div class="p-4">
+        <p class="text-sm text-gray-500">New York, USA</p>
+        <h4 class="text-lg font-semibold mt-1">Discover The Big Apple</h4>
+        <p class="mt-2 flex items-center">
+          ⭐ 4.8k <span class="text-gray-400 text-sm ml-1">(6.5k Reviews)</span>
+        </p>
+      </div>
+    </div>
+  
+    <!-- Card 6 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+      <img src="https://via.placeholder.com/400x250" alt="Tokyo City" class="w-full h-48 object-cover">
+      <div class="absolute top-2 right-2 bg-orange-100 text-orange-500 font-semibold px-3 py-1 rounded-lg shadow-md">
+        $599
+      </div>
+      <div class="p-4">
+        <p class="text-sm text-gray-500">Tokyo, Japan</p>
+        <h4 class="text-lg font-semibold mt-1">Embrace The Land Of The Rising Sun</h4>
+        <p class="mt-2 flex items-center">
+          ⭐ 4.7k <span class="text-gray-400 text-sm ml-1">(5.3k Reviews)</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Pagination -->
+  <div class="flex justify-center items-center mt-8">
+    <button class="bg-gray-200 text-gray-600 hover:bg-gray-300 px-4 py-2 rounded-lg mx-1">&larr; </button>
+    
+    <button class="bg-gray-200 text-gray-600 hover:bg-gray-300 px-4 py-2 rounded-lg mx-1"> &rarr;</button>
+  </div>
+
+</div>
+
+</body>
+
+
+<section class="mt-12 w-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12">
+  <h1 class="text-2xl font-bold text-center text-gray-800">
+    Visit Popular Destinations in the World
+  </h1>
+  
+  <!-- Tabs -->
+  <div class="tabs flex justify-center flex-wrap mt-6">
+    <div
+      class="tab text-green-700 border-b-2 border-green-700 px-4 py-2 cursor-pointer font-bold"
+      data-tab="special-deals"
+    >
+      Special Deals
+    </div>
+    <div
+      class="tab text-gray-500 hover:text-green-700 px-4 py-2 cursor-pointer font-bold"
+      data-tab="popular"
+    >
+      Popular
+    </div>
+    <div
+      class="tab text-gray-500 hover:text-green-700 px-4 py-2 cursor-pointer font-bold"
+      data-tab="recommendation"
+    >
+      Recommendation
+    </div>
+    <div
+      class="tab text-gray-500 hover:text-green-700 px-4 py-2 cursor-pointer font-bold"
+      data-tab="best-price"
+    >
+      Best Price
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="cards mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <div class="card bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:-translate-y-2" data-card="special-deals">
+      <img
+        src="Images/messi.jpg"
+        alt="Destination 1"
+        class="w-full h-auto rounded-lg shadow-md mb-4"
+      />
+      <h3 class="text-lg font-bold mb-2">China - Shuozu & Zhouzarang</h3>
+      <p class="text-gray-600">10 Activities | 12 Places | 1 Week</p>
+      <p class="text-gray-800 font-semibold mb-4">
+        <strong>$454</strong>/Person
+      </p>
+      <button
+        class="mt-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+      >
+        View Availability
+      </button>
+    </div>
+
+    <div class="card bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:-translate-y-2" data-card="popular">
+      <img
+        src="Images/messi.jpg"
+        alt="Destination 2"
+        class="w-full h-auto rounded-lg shadow-md mb-4"
+      />
+      <h3 class="text-lg font-bold mb-2">China - Shuozu & Zhouzarang</h3>
+      <p class="text-gray-600">10 Activities | 12 Places | 1 Week</p>
+      <p class="text-gray-800 font-semibold mb-4">
+        <strong>$454</strong>/Person
+      </p>
+      <button
+        class="mt-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+      >
+        View Availability
+      </button>
+    </div>
+
+    <div class="card bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:-translate-y-2" data-card="recommendation">
+      <img
+        src="Images/messi.jpg"
+        alt="Destination 3"
+        class="w-full h-auto rounded-lg shadow-md mb-4"
+      />
+      <h3 class="text-lg font-bold mb-2">China - Shuozu & Zhouzarang</h3>
+      <p class="text-gray-600">10 Activities | 12 Places | 1 Week</p>
+      <p class="text-gray-800 font-semibold mb-4">
+        <strong>$454</strong>/Person
+      </p>
+      <button
+        class="mt-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+      >
+        View Availability
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Icons -->
+  <div class="nav-icons mt-8 flex justify-center gap-4">
+    <button class="prev px-4 py-2 bg-gray-300 rounded-full hover:bg-gray-400 transition">
+      &larr;
+    </button>
+    <button class="next px-4 py-2 bg-gray-300 rounded-full hover:bg-gray-400 transition">
+      &rarr;
+    </button>
+  </div>
+
+  <script src="Js/HomeTopDestination.js" > </script>
+</section>
+
+  
+  <!--Home Card  r part copy  -->
+  <section
+  class="bg-gradient-to-b from-[#e2f7f2] to-[#fff] py-16 flex justify-center items-center"
+>
+  <div class="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+      <!-- Text Content -->
+      <div class="text-center md:text-left flex-1">
+        <h4 class="text-orange-400 font-semibold text-lg mb-2">
+          Plan your trip with us
+        </h4>
+        <h1
+          class="text-gray-900 font-extrabold text-4xl md:text-5xl leading-snug"
+        >
+          Ready for An <br />
+          Unforgettable Tour?
+        </h1>
+        <button
+          class="bg-emerald-500 text-white font-medium px-6 py-2 rounded-full shadow-lg mt-6 hover:bg-emerald-600 transition"
+        >
+          Book Your Tours
+        </button>
+      </div>
+
+      <!-- Balloon Icon -->
+      <div class="flex-1 flex justify-center">
+        <img src="Images/messi.jpg" alt="Balloon Icon" class="h-64 w-64" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="Footer"></div>
+
+<script>
+  // Load Footer.html dynamically
+  fetch('Footer.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('Footer').innerHTML = data;
+    })
+    .catch(err => console.error('Error loading Footer:', err));
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

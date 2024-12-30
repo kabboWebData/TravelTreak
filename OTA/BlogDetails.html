@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+    <div class="bg-[#BFF5E4]"> 
+
+      <div id="Navber"></div>
+    
+      <script>
+        // Load Navber.html dynamically
+        fetch('Navber.html')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+          })
+          .then(data => {
+            document.getElementById('Navber').innerHTML = data;
+    
+            // Add event listeners for the mobile menu toggle and dropdown functionality after loading Navber
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenu = document.getElementById('close-menu');
+            const togglePages = document.getElementById('toggle-pages');
+            const pagesDropdown = document.getElementById('pages-dropdown');
+  
+            if (menuToggle && mobileMenu) {
+              menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+              });
+            }
+  
+            if (closeMenu && mobileMenu) {
+              closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+              });
+            }
+  
+            if (togglePages && pagesDropdown) {
+              togglePages.addEventListener('click', () => {
+                pagesDropdown.classList.toggle('hidden');
+              });
+            }
+          })
+          .catch(err => console.error('Error loading Navber:', err));
+      </script>
+      
+
+    <section class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center">
+        <!-- FAQ Header -->
+        <div class="text-center md:text-left md:w-1/2 mb-8 md:mb-0">
+          <h1 class="text-4xl font-bold text-gray-800">Blog Details</h1>
+          <p class="text-gray-600 mt-2">Suzu Travels is one of the supportive and finest holiday Management travel</p>
+          <nav class="text-sm text-gray-500 mt-2">
+            Home ~ <span class="text-green-600">Destination</span>
+          </nav>
+        </div>
+        <!-- Image Section -->
+        <div class="md:w-1/2 flex justify-center">
+          <img src="Images/messi.jpg" alt="FAQ Image" class="max-w-full h-[500px] rounded shadow-md">
+        </div>
+      </section>
+      </div>
+
+
+
+    <div class="max-w-[1280px] my-16 w-full mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="  col-span-2">
+          <!-- Image Section -->
+          <div>
+            <img
+              src="https://via.placeholder.com/800x400"
+              alt="Blog Image"
+              class="rounded-lg w-full object-cover"
+            />
+          </div>
+
+          <!-- Blog Title -->
+          <h2 class="text-2xl font-bold mt-6">
+            Why You Need Virtual Assistant for Your Company
+          </h2>
+          <p class="text-gray-500 text-sm mt-1 flex items-center">
+            ✉ Posted by Admin &bull;
+            <span class="ml-2">&#128197; October 30, 2022</span>
+          </p>
+
+          <!-- Blog Content -->
+          <p class="mt-4 text-gray-600 leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </p>
+
+          <!-- Quote Section -->
+          <div class="bg-orange-500 text-white p-6 rounded-lg my-6">
+            <p class="italic">
+              "Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur."
+            </p>
+          </div>
+
+          <p class="text-gray-600 leading-relaxed">
+            Exceptuer sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+            unde omnis iste natus error sit voluptatem accusantium doloremque.
+          </p>
+
+          <!-- Second Image -->
+          <div class="my-6">
+            <img
+              src="https://via.placeholder.com/800x300"
+              alt="Blog Image 2"
+              class="rounded-lg w-full object-cover"
+            />
+          </div>
+
+          <p class="text-gray-600 leading-relaxed">
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+            fugit.
+          </p>
+
+          <!-- Tags & Share -->
+          <div class="flex justify-between items-center mt-6">
+            <!-- Tags -->
+            <div>
+              <h4 class="font-bold">Related Tags</h4>
+              <div class="mt-2 flex space-x-2">
+                <span
+                  class="bg-green-200 text-green-700 px-3 py-1 rounded-lg text-sm"
+                  >Assistant</span
+                >
+                <span
+                  class="bg-green-200 text-green-700 px-3 py-1 rounded-lg text-sm"
+                  >Advice</span
+                >
+                <span
+                  class="bg-green-200 text-green-700 px-3 py-1 rounded-lg text-sm"
+                  >Virtual</span
+                >
+              </div>
+            </div>
+            <!-- Social Share -->
+            <div>
+              <h4 class="font-bold">Social Share</h4>
+              <div class="mt-2 flex space-x-4">
+                <i class="fab fa-facebook text-green-500"></i>
+                <i class="fab fa-linkedin text-green-500"></i>
+                <i class="fab fa-instagram text-green-500"></i>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="bg-gray-50 my-8 ">
+
+            <!-- Card Section -->
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+              <!-- Profile Card -->
+              <div class="bg-orange-500 text-white text-center py-6 px-4">
+                <div class="flex justify-center mb-4">
+                  <img class="w-16 h-16 rounded-full border-4 border-white" src="https://via.placeholder.com/150" alt="Profile Picture">
+                </div>
+                <h2 class="text-2xl font-bold">Jacob Knight</h2>
+                <p class="text-sm mt-1">Senior Director</p>
+                <p class="text-sm mt-3">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit.</p>
+              </div>
+          
+              <!-- Comments Section -->
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold mb-4 ">2 Comments</h3>
+                <div class="w-[200px] border-t-2 border-green-300"></div>
+
+                <!-- Comment 1 -->
+<div class="flex my-4 mb-6 items-start">
+    <!-- Profile Image -->
+    <img class="w-12 h-12 rounded-full mr-4" src="https://via.placeholder.com/100" alt="Kian Wilkinson">
+    <!-- Comment Content -->
+    <div class="flex-1">
+      <h4 class="font-semibold">Kian Wilkinson</h4>
+      <p class="text-sm text-orange-500 mb-2">October 30, 2022</p>
+      <p class="text-gray-600 text-sm">
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit.
+      </p>
+    </div>
+    <!-- Reply Button -->
+    <button class="bg-green-500 text-white text-sm font-semibold px-4 py-1 rounded-lg hover:bg-green-600">Reply</button>
+  </div>
+  
+  <!-- Comment 2 -->
+  <div class="flex my-4 mb-6 items-start">
+    <!-- Profile Image -->
+    <img class="w-12 h-12 rounded-full mr-4" src="https://via.placeholder.com/100" alt="Jacob Knight">
+    <!-- Comment Content -->
+    <div class="flex-1">
+      <h4 class="font-semibold">Jacob Knight</h4>
+      <p class="text-sm text-orange-500 mb-2">October 30, 2022</p>
+      <p class="text-gray-600 text-sm">
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit.
+      </p>
+    </div>
+    <!-- Reply Button -->
+    <button class="bg-green-500 text-white text-sm font-semibold px-4 py-1 rounded-lg hover:bg-green-600">Reply</button>
+  </div>
+  
+          
+               
+                <div class="w-full border-t-2 border-green-300"></div>
+          
+                <!-- Leave a Comment -->
+                <div>
+                  <h4 class="font-semibold my-4 mb-3">Leave a Comment</h4>
+                  <textarea placeholder="Enter Your Comment Here..." rows="4" class="w-full border border-gray-300 rounded-lg p-3 mb-4 focus:outline-none focus:ring focus:ring-green-300"></textarea>
+          
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <input type="text" placeholder="Your Name" class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring focus:ring-green-300">
+                    <input type="email" placeholder="Your Email" class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring focus:ring-green-300">
+                  </div>
+                  <input type="text" placeholder="Your Topic" class="w-full border border-gray-300 rounded-lg p-3 mb-4 focus:outline-none focus:ring focus:ring-green-300">
+          
+                  <button class="bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600">Post Comment</button>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+
+
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+          <!-- Search -->
+          <div class="bg-white p-4 rounded-lg shadow">
+            <h3 class="font-bold text-center ">Search News</h3>
+            <div class="w-full border-t-2 my-2 border-green-300"></div>
+
+            <div class="relative mt-4">
+              <input
+                type="text"
+                placeholder="Search Here..."
+                class="w-full p-2 border rounded-lg"
+              />
+              <button
+                class="absolute right-2 top-2 text-green-500 text-lg hover:text-green-600"
+              >
+                &#128269;
+              </button>
+            </div>
+          </div>
+
+          <!-- Popular Categories -->
+          <div class="bg-white p-4 rounded-lg shadow mt-6">
+            <h3 class="font-bold text-center ">Popular Category</h3>
+
+            <div class="w-full border-t-2 my-2 border-green-300"></div>
+
+
+            <ul class="mt-4 text-gray-600 space-y-2">
+              <li>Digital Business</li>
+              <li>Business Consulting</li>
+              <li>Consulting</li>
+              <li>Business & Finance</li>
+            </ul>
+          </div>
+
+          <!-- Follow Us -->
+          <div class="bg-white p-4 rounded-lg shadow mt-6">
+            <h3 class="font-bold text-center">Follow Us</h3>
+            <div class="w-full border-t-2 my-2 border-green-300"></div>
+            <div class="flex space-x-4 mt-4 text-green-500 text-xl">
+                <i class="fab fa-facebook text-green-500"></i>
+                <i class="fab fa-linkedin text-green-500"></i>
+                <i class="fab fa-instagram text-green-500"></i>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="bg-white p-4 rounded-lg shadow mt-6">
+            <h3 class="font-bold text-center ">Tags</h3>
+            <div class="w-full border-t-2 my-2 border-green-300"></div>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="bg-green-200 text-green-700 px-3 py-1 rounded-lg"
+                >Assistant</span
+              >
+              <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg"
+                >Virtual</span
+              >
+              <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg"
+                >Consulting</span
+              >
+              <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg"
+                >Designer</span
+              >
+              <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg"
+                >Blog</span
+              >
+            </div>
+          </div>
+
+          <!-- Feeds -->
+          <div class="bg-white p-4 rounded-lg shadow mt-6">
+            <h3 class="font-bold text-center ">Feeds</h3>
+            <div class="w-full border-t-2 my-2 border-green-300"></div>
+            <div class="mt-4 space-y-4">
+              <div class="flex items-center">
+                <img
+                  src="https://via.placeholder.com/80"
+                  alt="feed-img"
+                  class="w-20 h-20 object-cover rounded-lg mr-4"
+                />
+                <p class="text-gray-600">
+                  Curabitur pulvinar euismod ante, ac sagittis ante posuere ac.
+                </p>
+              </div>
+              <div class="w-full border-t-2 my-2 border-green-300"></div>
+              <div class="flex items-center">
+                <img
+                  src="https://via.placeholder.com/80"
+                  alt="feed-img"
+                  class="w-20 h-20 object-cover rounded-lg mr-4"
+                />
+                <p class="text-gray-600">
+                  Curabitur pulvinar euismod ante, ac sagittis ante posuere ac.
+                </p>
+              </div>
+              <div class="w-full border-t-2 my-2 border-green-300"></div>
+              <div class="flex items-center">
+                <img
+                  src="https://via.placeholder.com/80"
+                  alt="feed-img"
+                  class="w-20 h-20 object-cover rounded-lg mr-4"
+                />
+                <p class="text-gray-600">
+                  Curabitur pulvinar euismod ante, ac sagittis ante posuere ac.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous"></script>
+
+    <div id="Footer"></div>
+
+<script>
+  // Load Footer.html dynamically
+  fetch('Footer.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('Footer').innerHTML = data;
+    })
+    .catch(err => console.error('Error loading Footer:', err));
+</script>
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelTrek Header</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+
+  <!-- Top Info Section (Email & Phone) -->
+  <div class=" py-2">
+    <div class="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center text-sm text-gray-600">
+        <div class="flex items-center space-x-3">
+          <i class="fas fa-envelope"></i>
+          <span class="text-[#2B2945] font-medium text-[16px] leading-[16px]">help@traveltrek.com</span>
+        </div>
+        <div class="hidden sm:flex items-center space-x-3">
+          <i class="fas fa-phone"></i>
+          <span class="text-[#2B2945] font-medium text-[16px] leading-[16px]">+1 (0800) 123 456</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white shadow-lg">
+    <div class="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <!-- Logo Section -->
+     <!-- Logo Section -->
+<div class="flex items-center space-x-2">
+
+ <a href="Home.html"> <img src="Images/messi.jpg"  alt="TravelTrek Logo" class="h-10"></a>
+ <a href="Home.html"> <span href="Home.html"  class="text-xl lg:block hidden font-semibold text-orange-600 whitespace-nowrap">TravelTrek</span> </a>
+
+</div>
+
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-8 items-center">
+    <!-- Desktop Navigation -->
+
+       <a href="Home.html" class="text-[#2B2935] font-medium text-[18px] leading-[24px] hover:text-orange-600 transition duration-300">Home</a>
+       <a href="About.html" class="text-[#2B2935] font-medium text-[18px] leading-[24px] hover:text-orange-600 transition duration-300">About Us</a>
+       <a href="Destination.html" class="text-[#2B2935] font-medium text-[18px] leading-[24px] hover:text-orange-600 transition duration-300">Destination</a>
+
+
+        <div class="relative group">
+          <button class="text-[#2B2935] font-medium text-[18px] leading-[24px] hover:text-orange-600 flex items-center transition duration-300">
+            Pages
+            <svg class="ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md -mt-[1px] py-2 w-40">
+            <a href="Booking.html" class="block px-4 py-2 text-[#2B2935] font-medium text-[18px] leading-[24px] hover:bg-teal-100 transition duration-200">Booking</a>
+            <a href="Faq.html" class="block px-4 py-2 text-[#2B2935] font-medium text-[18px] leading-[24px] hover:bg-teal-100 transition duration-200">FAQ</a>
+            <a href="ContactUs.html" class="block px-4 py-2 text-[#2B2935] font-medium text-[18px] leading-[24px] hover:bg-teal-100 transition duration-200">Contact</a>
+            <a href="Team.html" class="block px-4 py-2 text-[#2B2935] font-medium text-[18px] leading-[24px] hover:bg-teal-100 transition duration-200">Team</a>
+            <a href="Services.html" class="block px-4 py-2 text-[#2B2935] font-medium text-[18px] leading-[24px] hover:bg-teal-100 transition duration-200">Services</a>
+          </div>
+        </div>
+        <a href="Blog.html" class="text-[#2B2935] font-medium text-[18px] leading-[24px] hover:text-orange-600 transition duration-300">Blog</a>
+        <a href="LiveChat.html" class="bg-[#FF8900] text-[#FFFFFF] text-[18px] leading-[24px] px-6 py-2 rounded-full hover:bg-orange-500 transition duration-300">Live Chat</a>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="menu-toggle" class="block md:hidden text-gray-700">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-50">
+    <div class="flex flex-col h-full">
+      <div class="flex justify-between items-center p-4 border-b">
+        <span class="text-lg font-semibold text-gray-800">Menu</span>
+        <button id="close-menu" class="text-gray-700">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col flex-grow px-4 py-4 space-y-4">
+        <a href="Home.html" class="text-[#2B2935] font-medium text-[18px] leading-[24px]">Home</a>
+        <a href="About.html" class="text-[#2B2935] font-medium text-[18px] leading-[24px]">About Us</a>
+        <a href="Destination.html" class="text-[#2B2935] font-medium text-[18px] leading-[24px]">Destination</a>
+        <button class="text-[#2B2935] font-medium text-[18px] leading-[24px] flex justify-between items-center" id="toggle-pages">
+          Pages
+          <i id="pages-icon" class="fas fa-chevron-down"></i>
+        </button>
+        <div id="pages-dropdown" class="hidden pl-4 space-y-2">
+          <a href="Booking.html" class="block text-[#2B2935] font-medium text-[18px] leading-[24px]">Booking</a>
+          <a href="Faq.html" class="block text-[#2B2935] font-medium text-[18px] leading-[24px]">FAQ</a>
+          <a href="ContactUs.html" class="block text-[#2B2935] font-medium text-[18px] leading-[24px]">Contact</a>
+          <a href="Team.html" class="block text-[#2B2935] font-medium text-[18px] leading-[24px]">Team</a>
+          <a href="Services.html" class="block text-[#2B2935] font-medium text-[18px] leading-[24px]">Services</a>
+        </div>
+        <a href="Blog.html" class="text-[#2B2935] font-medium text-[18px] leading-[24px]">Blog</a>
+        <a href="LiveChat.html" class="bg-[#FF8900] text-white px-6 py-2 rounded-full">Live Chat</a>
+      </nav>
+    </div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const togglePages = document.getElementById('toggle-pages');
+    const pagesDropdown = document.getElementById('pages-dropdown');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+
+    togglePages.addEventListener('click', () => {
+      pagesDropdown.classList.toggle('hidden');
+    });
+  </script>
+  
+</body>
+</html>
